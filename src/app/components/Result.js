@@ -11,7 +11,7 @@ const Result = () => {
 
 
   const handleOnClick = () => {
-    dispatch(changeHome('home'));
+    dispatch(changeHome("home"));
     dispatch(clearTotalTime());
     dispatch(clearTimer());
     dispatch(clearUserClicks());
@@ -23,7 +23,7 @@ const Result = () => {
       return `${num} sec.`;
     }
     if (num/60 === 1) {
-      return '1 min. 0 sec.';
+      return "1 min. 0 sec.";
     }
     if (num/60 > 1) {
       const minutes = Math.trunc(num/60);

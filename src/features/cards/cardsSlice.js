@@ -5,7 +5,7 @@ import cards from "../../data/data";
 const initialState = cards;
 
 export const cardsSlice = createSlice({
-  name: 'cards',
+  name: "cards",
   initialState,
   reducers: {
     shuffleCards: (state) => {

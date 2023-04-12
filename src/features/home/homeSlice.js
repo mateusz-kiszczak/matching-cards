@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-const initialState = 'home';
+const initialState = "home";
 
 export const homeSlice = createSlice({
-  name: 'home',
+  name: "home",
   initialState,
   reducers: {
     changeHome: (state, action) => {

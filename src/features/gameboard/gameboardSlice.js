@@ -9,7 +9,7 @@ const initialState = {
 };
 
 export const gameboardSlice = createSlice({
-  name: 'gameboard',
+  name: "gameboard",
   initialState,
   reducers: {
     addCard: (state, action) => {

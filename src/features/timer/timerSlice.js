@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export const timerSlice = createSlice({
-  name: 'timer',
+  name: "timer",
   initialState,
   reducers: {
     increaseTimer: (state) => {

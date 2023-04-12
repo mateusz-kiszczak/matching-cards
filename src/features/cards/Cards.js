@@ -46,7 +46,7 @@ const Cards = () => {
       dispatch(addTotalTime(timer.time));
 
       const timeout = setTimeout(() => {
-        dispatch(changeHome('result'));
+        dispatch(changeHome("result"));
         dispatch(clearTimer());
         dispatch(resetCards());
       }, 1000);
@@ -65,10 +65,10 @@ const Cards = () => {
             key={`card-${card.id}`} 
             data-testid="card"
             className="card" 
-            style={{cursor: `${card.matchFounded ? 'not-allowed' : 'pointer'}`}} 
+            style={{cursor: `${card.matchFounded ? "not-allowed" : "pointer"}`}} 
             onClick={ () => handleOnClick(card) }
           >
-            <div className={`card-wrapper ${card.isOpen ? 'flip-card' : ''} ${card.matchFounded ? 'card-disable' : ''}`}>
+            <div className={`card-wrapper ${card.isOpen ? "flip-card" : ""} ${card.matchFounded ? "card-disable" : ""}`}>
               <div className={`card-back `}>
               </div>
               <div className="card-front">

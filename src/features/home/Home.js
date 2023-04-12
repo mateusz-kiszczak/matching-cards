@@ -9,12 +9,12 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const onClickButtonHandler = () => {
-    dispatch(changeHome('gameboard'));
+    dispatch(changeHome("gameboard"));
   };
 
   return (
     <>
-    { home === 'home' && 
+    { home === "home" && 
       <div className="home fade-in-anim">
         <main>
           <h1>matching cards</h1>
@@ -23,10 +23,10 @@ const Home = () => {
         <footer>2023 mateusz kiszczak</footer>
       </div>
     }
-    { home === 'gameboard' && 
+    { home === "gameboard" && 
       <Gameboard />
     }
-    { home === 'result' && 
+    { home === "result" && 
       <Result />
     }
     </>

@@ -1,13 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import Home from '../features/home/Home';
-import Cards from '../features/cards/Cards';
-import Result from './components/Result';
-import { Provider } from 'react-redux';
-import store  from './store';
+import { render, screen } from "@testing-library/react";
+import Home from "../features/home/Home";
+import Cards from "../features/cards/Cards";
+import Result from "./components/Result";
+import { Provider } from "react-redux";
+import store  from "./store";
 
 
 
-test('Renders the landing page', () => {
+test("Renders the landing page", () => {
   render(
     <Provider store={ store }>
       <Home />
@@ -19,19 +19,19 @@ test('Renders the landing page', () => {
 });
 
 
-test('Renders playing cards', () => {
+test("Renders playing cards", () => {
   const { container } = render(
     <Provider store={ store }>
       <Cards />
     </Provider>
   );
   
-  expect(container.getElementsByClassName('card').length).toBe(24);
-  expect(container.getElementsByTagName('img').length).toBe(24);
+  expect(container.getElementsByClassName("card").length).toBe(24);
+  expect(container.getElementsByTagName("img").length).toBe(24);
 });
 
 
-test('Renders the landing page', () => {
+test("Renders the landing page", () => {
   render(
     <Provider store={ store }>
       <Result />

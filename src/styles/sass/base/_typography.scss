@@ -3,16 +3,22 @@
 }
 
 h1 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 800;
+  font: {
+    size: clamp(1.5rem, 4vw, 2.5rem);
+    weight: 800;
+  }
+  text: {
+    transform: uppercase;
+    align: center;
+  }
 }
 
 footer,
 p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  font-family: Arial, Helvetica, sans-serif;
+  font: {
+    family: Arial, Helvetica, sans-serif;
+    size: clamp(1rem, 2vw, 1.5rem);
+  }
 }
 
 footer {
