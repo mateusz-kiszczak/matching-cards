@@ -1,0 +1,8 @@
+@use './home.scss';
+@use './gameboard.scss';
+@use './result.scss';
+@import '../utilities/variables.scss';
+
+.app {
+  background: $main-bg;
+}

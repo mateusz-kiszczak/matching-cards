@@ -1,0 +1,18 @@
+.button {
+  background-color: hsl(19, 100%, 93%);
+  border: {
+    width: 3px;
+    style: solid;
+    color: hsl(19, 68%, 62%);
+    radius: 10px;
+  }
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  color: hsl(19, 63%, 27%);
+  cursor: pointer;
+  font: {
+    size: clamp(1rem, 3vw, 2rem);
+    weight: 800;
+  }
+  text-transform: uppercase;
+  padding: 12px 36px;  
+}

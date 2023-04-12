@@ -1,0 +1,258 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+* {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 800;
+}
+
+footer,
+p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+  text-transform: capitalize;
+}
+
+html,
+body,
+.app,
+.home,
+.gameboard,
+.result {
+  width: 100vw;
+  height: 100vh;
+}
+
+.home,
+.gameboard,
+.result {
+  padding: 5vw;
+}
+
+@media only screen and (orientation: landscape) {
+  .home,
+.gameboard,
+.result {
+    padding: 24px;
+  }
+}
+.home {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.home main {
+  align-self: center;
+  justify-self: center;
+}
+
+.home footer {
+  justify-self: center;
+}
+
+.result {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
+}
+
+.result main {
+  align-self: center;
+  justify-self: center;
+}
+
+.gameboard {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 3vw;
+}
+
+@media only screen and (orientation: landscape) {
+  .gameboard {
+    width: 80vh;
+    margin: 0 auto;
+    gap: 3vh;
+  }
+}
+.card {
+  background-color: transparent;
+  perspective: 1000px;
+  user-select: none;
+}
+
+.card-wrapper {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card {
+  transform: rotateY(180deg);
+}
+
+.card-back, .card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card-back {
+  background-image: url("../../img/card-pattern.png");
+  background-size: 90%;
+  border: 3px solid hsl(19deg, 68%, 62%);
+}
+
+.card-front {
+  background-color: hsl(0deg, 0%, 99%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  transform: rotateY(180deg);
+  border: 3px solid hsl(19deg, 68%, 62%);
+}
+
+.card-disable {
+  transform: scale(0.5, 0.5);
+}
+
+.button {
+  background-color: hsl(19deg, 100%, 93%);
+  border-width: 3px;
+  border-style: solid;
+  border-color: hsl(19deg, 68%, 62%);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  color: hsl(19deg, 63%, 27%);
+  cursor: pointer;
+  font-size: clamp(1rem, 3vw, 2rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 12px 36px;
+}
+
+.fade-in-anim {
+  animation: fade-in 400ms forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.home main {
+  display: grid;
+}
+
+.home h1 {
+  margin-bottom: 36px;
+}
+
+.result main {
+  display: grid;
+}
+
+.result h1 {
+  margin-bottom: 36px;
+}
+
+.result button {
+  margin-top: 36px;
+}
+
+.result-stats {
+  margin-top: 12px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.result-stats p {
+  font-weight: 600;
+}
+
+.app {
+  background: radial-gradient(circle, rgb(203, 255, 209) 32%, rgb(84, 248, 255) 100%);
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,52 @@
+.card {
+  background-color: transparent;
+  perspective: 1000px;
+  // cursor: pointer;
+  user-select: none;
+}
+
+.card-wrapper {
+  position: relative;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card {
+  transform: rotateY(180deg);
+}
+
+.card-back, .card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.card-back {
+  background-image: url('../../img/card-pattern.png');
+  background-size: 90%;
+  border: 3px solid hsl(19, 68%, 62%);
+}
+
+.card-front {
+  background-color: hsl(0, 0%, 99%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  transform: rotateY(180deg);
+  border: 3px solid hsl(19, 68%, 62%);
+}
+
+.card-disable {
+  transform: scale(0.5, 0.5);
+  // cursor: not-allowed;
+}

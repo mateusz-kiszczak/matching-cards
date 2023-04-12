@@ -1,0 +1,22 @@
+.result main {
+  display: grid;
+}
+
+.result h1 {
+  margin-bottom: 36px;
+}
+
+.result button {
+  margin-top: 36px;
+}
+
+.result-stats {
+  margin-top: 12px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.result-stats p {
+  font-weight: 600;
+}

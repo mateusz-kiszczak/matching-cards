@@ -1,0 +1,23 @@
+html,
+body,
+.app,
+.home,
+.gameboard,
+.result {
+  width: 100vw;
+  height: 100vh;
+}
+
+.home,
+.gameboard,
+.result {
+  padding: 5vw;
+}
+
+@media only screen and (orientation: landscape) {
+  .home,
+  .gameboard,
+  .result {
+    padding: 24px;
+  }
+}

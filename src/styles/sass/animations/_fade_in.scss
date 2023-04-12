@@ -1,0 +1,8 @@
+.fade-in-anim {
+  animation: fade-in 400ms forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
