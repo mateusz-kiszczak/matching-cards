@@ -43,4 +43,4 @@ Play the classic Matching Cards game.
 
 ## Live example
 
-[Matching CardsLIVE](https://react-matching-cards-live-120423.netlify.app/)
+[Matching Cards LIVE](https://react-matching-cards-live-120423.netlify.app/)
